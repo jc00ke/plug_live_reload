@@ -108,12 +108,12 @@ defmodule PlugLiveReloadTest do
       |> PlugLiveReload.call(opts)
       |> send_resp(200, [
         "<html>",
-        '<bo',
+        ~c"<bo",
         [?d, ?y | ">"],
         "<h1>Plug</h1>",
         "</b",
         ?o,
-        'dy>',
+        ~c"dy>",
         "</html>"
       ])
 
